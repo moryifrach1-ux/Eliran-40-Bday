@@ -28,7 +28,7 @@ body {
 
 .title-on-image {
   position: absolute;
-  top: 15%;
+  top: 8%;
   left: 50%;
   transform: translateX(-50%);
   font-size: clamp(28px, 6vw, 48px);
@@ -138,5 +138,6 @@ body {
   50% { transform: scale(1.5); opacity: 1; }
   100% { transform: scale(0); opacity: 0; }
 }
+
 
 
