@@ -1,0 +1,139 @@
+/* --- Google Font --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  background: #fff8f0;
+  direction: rtl;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* חלק ראשון: תמונה + כותרת */
+.section-top-image {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.top-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.title-on-image {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 4.5em;
+  font-weight: 900;
+  font-family: 'Playfair Display', serif;
+  color: #ffffffcc;
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+  margin: 0;
+}
+
+/* חלקים עם רקע זהב */
+.section {
+  margin: 20px auto;
+  max-width: 650px;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #f7e7b6, #e0dca5);
+  padding: 30px 25px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  color: #222222;
+  opacity: 0;
+  transform: translateY(20px);
+  position: relative;
+}
+
+/* אנימציה fade-in + pop */
+.section.animate {
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* חלק שני – ציטוט + תאריך */
+.section-middle .quote {
+  font-size: 1.4em;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.section-middle .date {
+  font-size: 1.8em;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+/* חלק שלישי – כתובת + RSVP + אייקונים */
+.section-bottom .location {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.rsvp-container {
+  font-size: 1.2em;
+  margin-bottom: 12px;
+}
+
+/* אייקונים */
+.icons {
+  margin-top: 15px;
+}
+
+.icons a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.icons img {
+  width: 32px;
+  margin: 0 10px;
+}
+
+/* נצנצים כלליים ברקע */
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px gold;
+  animation: sparkle-fall linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes sparkle-fall {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(700px) scale(0.5); opacity: 0; }
+}
+
+/* נצנצים בתוך החלקים */
+.section-sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px gold;
+  animation: sparkle-pop 0.8s forwards;
+  opacity: 0;
+}
+
+@keyframes sparkle-pop {
+  0% { transform: scale(0); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
