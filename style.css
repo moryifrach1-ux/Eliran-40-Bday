@@ -28,10 +28,10 @@ body {
 
 .title-on-image {
   position: absolute;
-  top: 20px;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 4.5em;
+  font-size: clamp(28px, 6vw, 48px);
   font-weight: 900;
   font-family: 'Playfair Display', serif;
   color: #ffffffcc;
@@ -137,3 +137,4 @@ body {
   50% { transform: scale(1.5); opacity: 1; }
   100% { transform: scale(0); opacity: 0; }
 }
+
